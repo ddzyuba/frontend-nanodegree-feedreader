@@ -82,10 +82,9 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('there is at least 1 entry element after loadFeed() is done', function(done) {
+        it('there is at least 1 entry element after loadFeed() is done', function() {
             var entryQuantity = $('.feed .entry').length;
             expect(entryQuantity).toBeGreaterThan(0);
-            done();
         });
 
     });
@@ -104,10 +103,9 @@ $(function() {
             });
         });
 
-        it('content changes after calling loadFeed()', function(done) {
+        it('content changes after calling loadFeed()', function() {
             secondFeedSelection = $('.feed').html();
             expect(secondFeedSelection).not.toBe(firstFeedSelection);
-            done();
         });
 
     });
